@@ -12,6 +12,7 @@ Status snapshot: 2026-11-13
 - Fixed the sign-in form JSX and React/Vite TypeScript declarations; the frontend production build now completes.
 - SQLite supports local startup; PostgreSQL URL configuration is supported for hosted use.
 - Added Vercel and Render deployment configuration and a deployment guide for managed PostgreSQL.
+- Published the project source and deployment configuration to the public `sheetalrajr/FinSight` GitHub repository on `main`.
 
 ## Needs to be done
 
@@ -32,7 +33,7 @@ Status snapshot: 2026-11-13
 ### Deployment
 
 - Configure Neon PostgreSQL, production secrets, restrictive CORS, HTTPS, and rate limits.
-- Create/push a GitHub repository, connect the hosting accounts, deploy the API to Render and frontend to Vercel, configure `VITE_API_URL`, and verify the live flow with synthetic data.
+- Connect Render, Vercel, and Neon; deploy the API and frontend, configure `DATABASE_URL`, `FRONTEND_URL`, and `VITE_API_URL`, and verify the live flow with synthetic data.
 - Add CI, operational logging that excludes sensitive financial data, backups, screenshots, and deployment instructions.
 
 ## Not claimed as complete
