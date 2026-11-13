@@ -13,6 +13,10 @@ Status snapshot: 2026-11-13
 - SQLite supports local startup; PostgreSQL URL configuration is supported for hosted use.
 - Added Vercel and Render deployment configuration and a deployment guide for managed PostgreSQL.
 - Published the project source and deployment configuration to the public `sheetalrajr/FinSight` GitHub repository on `main`.
+- Deployed the React frontend and FastAPI backend as public Vercel projects using the free Hobby tier, with Neon Free as the PostgreSQL database.
+- Configured encrypted backend environment variables (`DATABASE_URL`, `SECRET_KEY`, and `FRONTEND_URL`) and pointed the frontend's `VITE_API_URL` to the Vercel API.
+- Verified API health, browser CORS preflight, and synthetic account registration followed by successful login (201 and 200 responses).
+- Added `backend/index.py` as the Vercel FastAPI entry point and updated deployment instructions.
 
 ## Needs to be done
 
@@ -32,10 +36,10 @@ Status snapshot: 2026-11-13
 
 ### Deployment
 
-- Configure Neon PostgreSQL, production secrets, restrictive CORS, HTTPS, and rate limits.
-- Connect Render, Vercel, and Neon; deploy the API and frontend, configure `DATABASE_URL`, `FRONTEND_URL`, and `VITE_API_URL`, and verify the live flow with synthetic data.
+- Add rate limits, monitoring, backups, and data export/deletion before broad public use.
+- Migrate any user records from the suspended Render service if they need to keep existing accounts; the new Neon database starts empty.
 - Add CI, operational logging that excludes sensitive financial data, backups, screenshots, and deployment instructions.
 
 ## Not claimed as complete
 
-Automated tests, live deployment, bank connectivity, machine-learning categorization, anomaly detection, forecasting, recurring payment detection, and AI assistant are not implemented yet.
+Automated test suites, bank connectivity, machine-learning categorization, anomaly detection, forecasting, recurring payment detection, and AI assistant are not implemented yet. The prior Render API remains suspended and is no longer used by the live frontend.
